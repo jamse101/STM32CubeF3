@@ -20,6 +20,8 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+#include "SEGGER_SYSVIEW.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -57,6 +59,8 @@ int main(void)
   /* Initialize LEDs */
   BSP_LED_Init(LED3);
   BSP_LED_Init(LED4);
+
+  SEGGER_SYSVIEW_Conf();
  
 
   /* Thread 1 definition */
